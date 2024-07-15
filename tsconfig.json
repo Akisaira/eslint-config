@@ -1,0 +1,26 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowJs": false,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "useUnknownInCatchVariables": true,
+    "allowArbitraryExtensions": true,
+    "module": "ESNext",
+    "declaration": true,
+    "sourceMap": true,
+    "outDir": "./lib",
+    "lib": ["ESNext"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

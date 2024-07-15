@@ -1,2 +1,3 @@
-# eslint
+# @autumnsaury/eslint-config
+
 Personal ESLint Config

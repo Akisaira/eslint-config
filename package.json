@@ -1,0 +1,30 @@
+{
+  "name": "@autumnsaury/eslint-config",
+  "version": "0.0.0",
+  "description": "Personal ESLint configuration",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "Autumn Saury",
+  "license": "Apache-2.0",
+  "peerDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "devDependencies": {
+    "@eslint/config-inspector": "^0.5.1",
+    "@types/eslint": "^8.56.10",
+    "@types/eslint__js": "^8.42.3",
+    "tsc": "^2.0.4",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.6.0",
+    "@stylistic/eslint-plugin-ts": "^2.3.0",
+    "typescript-eslint": "^7.16.0"
+  },
+  "files": [
+    "lib"
+  ]
+}
