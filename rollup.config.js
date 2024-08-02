@@ -22,7 +22,7 @@ export default defineConfig([
   {
     input: 'src/index.ts',
     output: {
-      dir: 'lib',
+      dir: 'dist',
       format: 'esm'
     },
     plugins: [
@@ -36,7 +36,7 @@ export default defineConfig([
   {
     input: 'src/index.ts',
     output: {
-      file: 'lib/index.d.ts',
+      file: 'dist/index.d.ts',
       format: 'esm'
     },
     plugins: [
