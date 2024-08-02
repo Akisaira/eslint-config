@@ -146,9 +146,11 @@ export default function getTSConfig (project: string, tsconfigRootDir: string): 
       ],
       '@typescript-eslint/no-dupe-class-members': ['error'],
       '@typescript-eslint/no-dynamic-delete': ['error'],
-      '@typescript-eslint/no-empty-interface': [
+      '@typescript-eslint/no-empty-object-type': [
         'error',
-        { allowSingleExtends: true }
+        {
+          allowInterfaces: 'with-single-extends'
+        }
       ],
       '@typescript-eslint/no-extra-non-null-assertion': ['error'],
       '@typescript-eslint/no-extraneous-class': [
@@ -159,7 +161,6 @@ export default function getTSConfig (project: string, tsconfigRootDir: string): 
       '@typescript-eslint/no-for-in-array': ['error'],
       '@typescript-eslint/no-implied-eval': ['error'],
       '@typescript-eslint/no-invalid-void-type': ['error'],
-      '@typescript-eslint/no-loss-of-precision': ['error'],
       '@typescript-eslint/no-misused-new': ['error'],
       '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
       '@typescript-eslint/no-namespace': ['error'],
@@ -200,7 +201,7 @@ export default function getTSConfig (project: string, tsconfigRootDir: string): 
         }
       ],
       '@typescript-eslint/no-useless-constructor': ['error'],
-      '@typescript-eslint/no-var-requires': ['error'],
+      '@typescript-eslint/no-require-imports': ['error', { allowAsImport: true }],
       '@typescript-eslint/non-nullable-type-assertion-style': ['error'],
       '@typescript-eslint/only-throw-error': [
         'error',
