@@ -9,7 +9,6 @@ export default {
   },
   files: ['**/*'],
   rules: {
-    // #region General
     '@stylistic/array-bracket-newline': ['error', 'consistent'],
     '@stylistic/array-bracket-spacing': ['error', 'never'],
     '@stylistic/array-element-newline': ['error', 'consistent'],
@@ -50,7 +49,6 @@ export default {
     '@stylistic/multiline-ternary': ['error', 'always-multiline'],
     '@stylistic/no-extra-parens': ['error', 'functions'],
     '@stylistic/no-floating-decimal': 'error',
-    
     '@stylistic/object-curly-newline': ['error', { multiline: true, consistent: true }],
     '@stylistic/object-curly-spacing': ['error', 'always'],
     '@stylistic/object-property-newline': ['error', { allowMultiplePropertiesPerLine: true }],
@@ -73,42 +71,6 @@ export default {
     '@stylistic/template-curly-spacing': ['error', 'never'],
     '@stylistic/template-tag-spacing': ['error', 'never'],
     '@stylistic/wrap-iife': ['error', 'any', { functionPrototypeMethods: true }],
-    '@stylistic/yield-star-spacing': ['error', 'both'],
-    // #endregion
-
-    // #region JSX
-    '@stylistic/jsx-quotes': ['error', 'prefer-double'],
-    '@stylistic/jsx-child-element-spacing': 'error',
-    '@stylistic/jsx-closing-bracket-location': ['error', 'tag-aligned'],
-    '@stylistic/jsx-closing-tag-location': 'error',
-    '@stylistic/jsx-curly-brace-presence': ['error', 'never'],
-    '@stylistic/jsx-curly-newline': ['error', 'consistent'],
-    '@stylistic/jsx-equals-spacing': ['error', 'never'],
-    '@stylistic/jsx-indent-props': [2, 2],
-    '@stylistic/jsx-max-props-per-line': ['error', { maximum: { single: 3, multi: 1 } }],
-    '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
-    '@stylistic/jsx-props-no-multi-spaces': 'error',
-    '@stylistic/jsx-self-closing-comp': ['error', { component: true, html: true }],
-    '@stylistic/jsx-sort-props': ['error', { 
-      callbacksLast: true, 
-      shorthandFirst: true,
-      reservedFirst: true,
-      multiline: 'last' 
-    }],
-    '@stylistic/jsx-tag-spacing': ['error', {
-      closingSlash: 'never',
-      beforeSelfClosing: 'always',
-      afterOpening: 'never'
-    }],
-    '@stylistic/jsx-wrap-multilines': ['error', {
-      declaration: 'parens-new-line',
-      assignment: 'parens-new-line',
-      return: 'parens-new-line',
-      arrow: 'parens-new-line',
-      condition: 'parens-new-line',
-      logical: 'parens-new-line',
-      prop: 'parens-new-line' 
-    }]
-    // #endregion
+    '@stylistic/yield-star-spacing': ['error', 'both']
   }
 } satisfies Linter.Config
