@@ -1,8 +1,17 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 // @ts-check
 
-import autumn from '.'
+import { dirname, resolve } from 'path'
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
-export default [
-  ...autumn()
-]
+import defineConfig from './lib/index.js'
+
+const __filename = new URL(import.meta.url).pathname
+const __dirname = dirname(__filename)
+
+export default defineConfig({
+  tsconfigPath: resolve(__dirname, 'tsconfig.json'),
+  tsconfigRootDir: __dirname,
+  extra: [{
+    ignores: ['lib/**/*']
+  }]
+})

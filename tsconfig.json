@@ -1,5 +1,5 @@
 {
-  "include": ["src"],
+  "include": ["src", "eslint.config.js", "rollup.config.js"],
   "compilerOptions": {
     "allowUnreachableCode": false,
     "allowJs": false,
@@ -15,6 +15,8 @@
     "useUnknownInCatchVariables": true,
     "allowArbitraryExtensions": true,
     "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
     "declaration": true,
     "sourceMap": true,
     "outDir": "./lib",

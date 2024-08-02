@@ -1,5 +1,5 @@
-import { Linter } from "eslint";
+import type { Linter } from 'eslint'
 
 export default {
-  name: "react",
-} satisfies Linter.FlatConfig
+  name: 'react'
+} satisfies Linter.Config

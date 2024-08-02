@@ -3,26 +3,40 @@
   "version": "0.0.0",
   "description": "Personal ESLint configuration",
   "main": "lib/index.js",
+  "type": "module",
   "scripts": {
-    "build": "tsc"
+    "build": "rollup -c rollup.config.js",
+    "inspect": "npx @eslint/config-inspector"
   },
   "keywords": [],
   "author": "Autumn Saury",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "peerDependencies": {
-    "eslint": "^8.57.0"
+    "eslint": "^9"
   },
   "devDependencies": {
-    "@eslint/config-inspector": "^0.5.1",
-    "@types/eslint": "^8.56.10",
+    "@eslint/config-inspector": "^0.5.2",
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@types/eslint": "^9.6.0",
+    "@types/eslint__eslintrc": "^2.1.2",
     "@types/eslint__js": "^8.42.3",
-    "tsc": "^2.0.4",
-    "typescript": "^5.5.3"
+    "@types/node": "^22.0.3",
+    "eslint": "^9.8.0",
+    "rollup": "^4.19.2",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-esbuild": "^6.1.1",
+    "typescript": "^5.5.4"
   },
   "dependencies": {
-    "@eslint/js": "^9.6.0",
-    "@stylistic/eslint-plugin-ts": "^2.3.0",
-    "typescript-eslint": "^7.16.0"
+    "@eslint/compat": "^1.1.1",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.8.0",
+    "@stylistic/eslint-plugin": "^2.6.1",
+    "eslint-plugin-import-x": "^3.1.0",
+    "eslint-plugin-n": "^17.10.1",
+    "eslint-plugin-promise": "^7.0.0",
+    "typescript-eslint": "^8.0.0"
   },
   "files": [
     "lib"

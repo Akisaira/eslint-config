@@ -1,36 +1,39 @@
-import { Linter } from "eslint";
-import coreConfig from "./addons/core";
-import javascriptConfig from "./addons/javascript";
-import reactConfig from "./addons/react";
-import solidConfig from "./addons/solid";
-import stylishConfig from "./addons/stylish";
-import typescriptConfig from "./addons/typescript";
+import type { Linter } from 'eslint'
 
-export type AutumnBuiltins = 'javascript' | 'react' | 'solid' | 'typescript'
+import reactConfig from './addons/react'
+import solidConfig from './addons/solid'
+import coreConf from './basic/core'
+import stylishConf from './basic/stylistic'
+import getTSConf from './basic/typescript'
+import otherPluginsConf from './basic/other-plugins'
+
+export type AutumnBuiltins = 'react' | 'solid'
 
 export interface AutumnConfig {
-  builtIn: AutumnBuiltins[]
-  extra: Linter.FlatConfig[]
+  tsconfigPath: string
+  tsconfigRootDir: string
+  builtIn?: AutumnBuiltins[]
+  extra?: Linter.Config[]
 }
 
-export default function autumn(config: AutumnConfig): Linter.FlatConfig[] {
-  const rules: Linter.FlatConfig[] = [coreConfig, stylishConfig]
+export default function defineConfig (config: AutumnConfig): Linter.Config[] {
+  const rules: Linter.Config[] = [coreConf, stylishConf, ...getTSConf(config.tsconfigPath, config.tsconfigRootDir), otherPluginsConf]
 
-  for (const builtIn of config.builtIn) {
-    switch (builtIn) {
-      case 'javascript':
-        rules.push(javascriptConfig)
-        break
-      case 'react':
-        rules.push(reactConfig)
-        break
-      case 'solid':
-        rules.push(solidConfig)
-        break
-      case 'typescript':
-        rules.push(typescriptConfig)
-        break
+  if (config.builtIn != null) {
+    for (const builtIn of config.builtIn) {
+      switch (builtIn) {
+        case 'react':
+          rules.push(reactConfig)
+          break
+        case 'solid':
+          rules.push(solidConfig)
+          break
+      }
     }
+  }
+
+  if (config.extra != null) {
+    rules.push(...config.extra)
   }
 
   return rules
