@@ -1,13 +1,15 @@
 {
   "name": "@autumnsaury/eslint-config",
-  "version": "0.0.1-alpha.1",
+  "version": "0.0.1-alpha.2",
   "description": "Personal ESLint configuration",
   "main": "dist/index.js",
   "type": "module",
   "private": false,
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "inspect": "npx @eslint/config-inspector"
+    "inspect": "npx @eslint/config-inspector",
+    "test": "eslint",
+    "lint": "eslint --fix"
   },
   "keywords": [
     "eslint",

@@ -1,4 +1,3 @@
-
 import type { Linter } from 'eslint'
 
 import stylisticPlugin from '@stylistic/eslint-plugin'
@@ -22,11 +21,11 @@ export default {
     '@stylistic/jsx-one-expression-per-line': ['error', { allow: 'single-child' }],
     '@stylistic/jsx-props-no-multi-spaces': 'error',
     '@stylistic/jsx-self-closing-comp': ['error', { component: true, html: true }],
-    '@stylistic/jsx-sort-props': ['error', { 
-      callbacksLast: true, 
+    '@stylistic/jsx-sort-props': ['error', {
+      callbacksLast: true,
       shorthandFirst: true,
       reservedFirst: true,
-      multiline: 'last' 
+      multiline: 'last'
     }],
     '@stylistic/jsx-tag-spacing': ['error', {
       closingSlash: 'never',
@@ -40,7 +39,7 @@ export default {
       arrow: 'parens-new-line',
       condition: 'parens-new-line',
       logical: 'parens-new-line',
-      prop: 'parens-new-line' 
+      prop: 'parens-new-line'
     }]
   }
 } satisfies Linter.Config
