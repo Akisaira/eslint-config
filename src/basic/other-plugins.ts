@@ -34,27 +34,18 @@ export default {
     'import-x/newline-after-import': ['error'],
     'import-x/order': ['error', {
       groups: [
-        'type',
         'builtin',
         'external',
-        ['parent', 'sibling']
+        ['parent', 'sibling', 'internal']
       ],
       pathGroups: [
         {
           pattern: '@/**',
           group: 'external',
           position: 'after'
-        },
-        {
-          pattern: './**',
-          group: 'sibling',
-          position: 'after'
-        },
-        {
-          pattern: '../**',
-          group: 'parent'
         }
       ],
+      distinctGroup: true,
       'newlines-between': 'always'
     }]
   }
