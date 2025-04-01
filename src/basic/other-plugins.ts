@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint'
-
 import * as importXPlugin from 'eslint-plugin-import-x'
 import nPlugin from 'eslint-plugin-n'
 import promisePlugin from 'eslint-plugin-promise'

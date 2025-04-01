@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint'
-
 import solidPlugin from 'eslint-plugin-solid'
 
 export default {

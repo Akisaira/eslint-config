@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint'
-
 import tseslint from 'typescript-eslint'
 
 export default function getTSConfig (project: string, tsconfigRootDir: string): Linter.Config[] {
@@ -165,7 +164,7 @@ export default function getTSConfig (project: string, tsconfigRootDir: string): 
       '@typescript-eslint/no-misused-promises': ['error', { checksVoidReturn: false }],
       '@typescript-eslint/no-namespace': ['error'],
       '@typescript-eslint/no-non-null-asserted-optional-chain': ['error'],
-      '@typescript-eslint/no-non-null-assertion': ['error'],
+      '@typescript-eslint/no-non-null-assertion': ['warn'],
       '@typescript-eslint/no-redeclare': ['error', { builtinGlobals: false }],
       '@typescript-eslint/no-this-alias': ['error', { allowDestructuring: true }],
       '@typescript-eslint/no-unnecessary-boolean-literal-compare': ['error'],
@@ -185,9 +184,12 @@ export default function getTSConfig (project: string, tsconfigRootDir: string): 
         'error',
         {
           args: 'none',
+          argsIgnorePattern: '^_',
           caughtErrors: 'none',
-          ignoreRestSiblings: true,
-          vars: 'all'
+          caughtErrorsIgnorePattern: '^_',
+          vars: 'all',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true
         }
       ],
       '@typescript-eslint/no-use-before-define': [
