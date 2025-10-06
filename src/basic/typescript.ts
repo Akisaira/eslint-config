@@ -1,8 +1,9 @@
 import type { Linter } from 'eslint'
 import tseslint from 'typescript-eslint'
+import { defineConfig } from 'eslint/config'
 
 export default function getTSConfig (project: string, tsconfigRootDir: string): Linter.Config[] {
-  return tseslint.config({
+  return defineConfig({
     name: 'typescript',
     plugins: {
       '@typescript-eslint': tseslint.plugin
